@@ -27,7 +27,7 @@ internal class MainKtTest {
     }
 
     @Test
-    fun should_ReturnMinus1_When_ReturnNull() {
+    fun should_ReturnException_When_ReturnNull() {
         // given
         val charactersList = mutableListOf("a", "b", "c");
         // when
