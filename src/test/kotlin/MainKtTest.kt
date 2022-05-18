@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.function.Executable
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 
 internal class MainKtTest {
 
@@ -24,6 +25,19 @@ internal class MainKtTest {
         // then
         assertEquals(-1.0, charPrecentage);
     }
+
+    @Test
+    fun should_ReturnMinus1_When_ReturnNull() {
+        // given
+        val charactersList = mutableListOf("a", "b", "c");
+        // when
+        val charPrecentage = findCharRepetitionPercentage(charactersList);
+        // then
+        assertNotNull(charPrecentage);
+    }
+
+
+
 
 
 }

@@ -1,7 +1,6 @@
 
 fun main() {
-    val result : Double = findCharRepetitionPercentage(mutableListOf("a","b","b"));
-    println(result);
+    println(findCharRepetitionPercentage(listOf("a","b","b")));
 }
 
 /**
@@ -10,10 +9,9 @@ fun main() {
  * @return Double
  **/
 
-fun findCharRepetitionPercentage(charsList: MutableList<String>): Double  {
+fun findCharRepetitionPercentage(charsList: List<String>): Double? {
     val totalCount :  Int = charsList.size;
     var repeatTimes : Int = 0;
-
     charsList.forEach{
         if (it != "a" && it != "b") return -1.0;
         if(it == "a") repeatTimes++;
