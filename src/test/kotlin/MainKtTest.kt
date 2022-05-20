@@ -26,7 +26,7 @@ internal class MainKtTest {
     }
 
     @Test
-    fun should_ReturnMinus1_When_ReturnNull() {
+    fun should_ReturnMinus1_When_HaveEmptyList() {
         // given
         val charactersList = listOf("")
         // when
