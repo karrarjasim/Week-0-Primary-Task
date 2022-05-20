@@ -1,20 +1,23 @@
 
 fun main() {
-    println(findCharRepetitionPercentage(listOf("a","b","b")));
+    println(findCharRepetitionPercentage(listOf("")))
 }
 
 /**
  * This function return the repetition percentage for a character in list of characters.
- * @parama charsList list of characters
+ * @param charsList list of characters
  * @return Double
  **/
 
-fun findCharRepetitionPercentage(charsList: List<String>): Double? {
-    val totalCount :  Int = charsList.size;
-    var repeatTimes : Int = 0;
+fun findCharRepetitionPercentage(charsList: List<String>): Double {
+    val totalCount :  Int = charsList.size
+    var repeatTimes = 0
+    if (charsList.isEmpty()){
+        return -1.0
+    }
     charsList.forEach{
-        if (it != "a" && it != "b") return -1.0;
-        if(it == "a") repeatTimes++;
+        if (it != "a" && it != "b") return -1.0
+        if(it == "a") repeatTimes++
     }
     return   (repeatTimes.toDouble() / totalCount) * 100
 }
